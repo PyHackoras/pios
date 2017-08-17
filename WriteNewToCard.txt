@@ -1,0 +1,5 @@
+if xz 7za e <pios>.img.xz
+dd if=<PathToOSImage> of=/dev/sd<x> bs=4M
+dtoverlay=dwc2 >> config.txt
+modules-load=dwc2,g_ether after rootwait in cmdline.txt
+shove card in Pi, connect to PC USB, ssh to raspberrypi.local
